@@ -1,0 +1,53 @@
+-- Warning: You can generate script only for one table/view at a time in your Free plan 
+-- 
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `hospitals`
+
+CREATE TABLE `hospitals`
+(
+ `hospitalid`      integer NOT NULL ,
+ `hospitalname`    varchar(45) NOT NULL ,
+ `address`         varchar(45) NOT NULL ,
+ `zipcode`         integer NOT NULL ,
+ `phonenumber`     integer NOT NULL ,
+ `icubeds`         integer NOT NULL ,
+ `normalbeds`      integer NOT NULL ,
+ `totalbeds`       integer NOT NULL ,
+ `usedicubeds`     integer NOT NULL ,
+ `usednormalbeds`  integer NOT NULL ,
+ `usedtotalbeds`   integer NOT NULL ,
+ `oxygencylinders` integer NOT NULL ,
+ `latitude`        integer NOT NULL ,
+ `longitude`       integer NOT NULL ,
+ `isadmin`         binary NOT NULL ,
+
+PRIMARY KEY (`hospitalid`, `hospitalname`, `address`, `zipcode`, `phonenumber`, `icubeds`, `normalbeds`, `totalbeds`, `usedicubeds`, `usednormalbeds`, `usedtotalbeds`, `oxygencylinders`, `latitude`, `longitude`, `isadmin`)
+);
+
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `user`
+
+CREATE TABLE `user`
+(
+ `userid`       integer NOT NULL ,
+ `username`     longtext NOT NULL ,
+ `email`        varchar(45) NOT NULL ,
+ `password`     char NOT NULL ,
+ `creationdate` timestamp NOT NULL ,
+ `modifieddate` timestamp NOT NULL ,
+ `isadmin`      binary NOT NULL ,
+
+PRIMARY KEY (`userid`, `username`, `email`, `password`, `creationdate`, `modifieddate`, `isadmin`)
+);
+
+
+
+
